@@ -10,6 +10,18 @@ buildscript {
     }
 }
 
+plugins {
+  id "org.sonarqube" version "3.1.1"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "l2dy-sonarcloud_Tusky"
+    property "sonar.organization", "l2dy-sonarcloud"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 allprojects {
     repositories {
         google()
